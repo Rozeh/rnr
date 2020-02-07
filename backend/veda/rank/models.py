@@ -6,4 +6,4 @@ class Rank(models.Model):
     check_time = models.DateTimeField(auto_now=False, auto_now_add=True)
     target_post_url = models.URLField(null=True,default='')
     temp_data = models.TextField(null=True,default='')
-    rank = models.IntegerField(default = 0)
+    rank = models.IntegerField(null=True)
