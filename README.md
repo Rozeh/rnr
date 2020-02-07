@@ -1,2 +1,5 @@
 ##RNR
 start
+
+init
+
