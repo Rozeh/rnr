@@ -16,9 +16,9 @@ export class RankContainer extends Component {
     const { handleChange } = this;
     return (
       <div>
-        <rankWrapper>
+        <RankWrapper>
           <InsertForm rankInput={rankInput} onChangeInput={handleChange} />
-        </rankWrapper>
+        </RankWrapper>
       </div>
     );
   }

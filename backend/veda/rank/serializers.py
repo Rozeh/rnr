@@ -4,4 +4,5 @@ from .models import Rank
 class RankSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Rank
-        fields = ("id","keyword","check_time","target_post_url","temp_data", "rank")
+        fields = ("id","text")
+        # "check_time","target_post_url","temp_data", "rank")

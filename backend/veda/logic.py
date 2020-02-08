@@ -29,12 +29,17 @@ pkg_list=soup.find_all("a",{"class":"total_tit"})
 
 data = {}
 count = 1
+
 for title in pkg_list:
     data[count]=title.get('href')
     count=count+1
 
-print(data.items())
-print(type(data))
+# print(data.items())
 
-with open(os.path.join("",'result.json'),'w+') as json_file:
-    json.dump(data, json_file, indent='\t')
+    search_url = https://m.post.naver.com/viewer/postView.nhn?volumeNo=27192137&memberNo=6670284&vType=VERTICAL
+
+for num, url in data.items():
+    if url == search_url:
+        rank = num
+    elif:
+        rank is None

@@ -2,10 +2,16 @@ import React from 'react';
 import "./InsertForm.scss";
 
 
-const InserForm = ({ rankInput, onChangeInput}) =>{
+const InsertForm = ({ rankInput, onChangeInput, onAdd }) =>{
     const handleChange = e => {
         const { value } = e.target;
         onChangeInput({ value });
+    };
+
+    const handleKeyPress = e => {
+        if(e.key === 'Enter'){
+            onAdd()
+        }
     };
 
     return(
@@ -16,6 +22,7 @@ const InserForm = ({ rankInput, onChangeInput}) =>{
                 name="rank"
                 value={rankInput}
                 onChange={handleChange}
+                onKeyPress={handleKeyPress}
             />
         </div>
     );
