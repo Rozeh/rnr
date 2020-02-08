@@ -1,0 +1,33 @@
+@import "./../../../styles/utils.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  .title {
+    border-bottom: 1px solid darkslategray;
+    padding-top: 0.75rem;
+
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  input {
+    margin-top: 0.75rem;
+    height: 5rem;
+    border: 1px solid darkslategray;
+    border-radius: 2px;
+
+    outline: none;
+
+    font-size: 1.5rem;
+    padding: 0.25rem;
+
+    background: darkgray;
+
+    color: white;
+    font-weight: 600;
+
+    flex: 1;
+  }
+}
