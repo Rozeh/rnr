@@ -10,14 +10,22 @@ export class RankContainer extends Component {
     const { changeRankInput } = this.props;
     changeRankInput({ value });
   };
+  addRanking = () => {
+    const { addRanking } = this.props;
+    addRanking();
+  };
 
   render() {
     const { rankInput } = this.props;
-    const { handleChange } = this;
+    const { handleChange, addRanking } = this;
     return (
       <div>
         <RankWrapper>
-          <InsertForm rankInput={rankInput} onChangeInput={handleChange} />
+          <InsertForm
+            rankInput={rankInput}
+            onChangeInput={handleChange}
+            onAdd={addRanking}
+            />
         </RankWrapper>
       </div>
     );
@@ -25,13 +33,17 @@ export class RankContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  rankInput: state.rank.rankInput
+  rankInput: state.rank.rankInput,
+  rank: state.rank.rankies
 });
 
 const mapDispatchToProps = dispatch => {
   return {
     changeRankInput: ({ value }) => {
       dispatch(rankActions.changeRankInput({ value }));
+    },
+    addRanking: () => {
+      dispatch(rankActions.addRanking());
     }
   };
 };

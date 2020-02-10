@@ -10,7 +10,7 @@ const InsertForm = ({ rankInput, onChangeInput, onAdd }) =>{
 
     const handleKeyPress = e => {
         if(e.key === 'Enter'){
-            onAdd()
+            onAdd();
         }
     };
 
@@ -28,4 +28,4 @@ const InsertForm = ({ rankInput, onChangeInput, onAdd }) =>{
     );
 };
 
-export default InserForm;
+export default InsertForm;

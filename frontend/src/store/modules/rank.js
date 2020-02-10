@@ -34,7 +34,7 @@ const addRankingEpic = (action$, state$) => {
     ofType(ADD_RANKING),
     withLatestFrom(state$),
     mergeMap(([action, state]) => {
-      return ajax.post('/api/rank/', { text: state.rank.rankInput }).pipe(
+      return ajax.post('rank/', { text: state.rank.rankInput }).pipe(
         map(response => {
           const rank = response.response;
           return addRankingSuccess(rank);
